@@ -43,8 +43,9 @@ export const SummaryCard = styled.div<SummaryCardProps>`
     css`
       background: ${props.theme['green-700']};
     `}
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
     strong {
       font-size: 1.5rem;
     }
+  }
 `;
