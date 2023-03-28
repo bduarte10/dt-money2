@@ -18,7 +18,7 @@ export function Transactions() {
         <TransactionsTable>
           <tbody>
             <tr>
-              <td width='50%'>Desenvolvimento de site</td>
+              <td>Desenvolvimento de site</td>
               <td>
                 <PriceHighlight variant='income'>R$12.00,00</PriceHighlight>
               </td>
@@ -26,7 +26,7 @@ export function Transactions() {
               <td>18/03/2023</td>
             </tr>
             <tr>
-              <td width='50%'>Hamburguer</td>
+              <td>Hamburguer</td>
               <td>
                 <PriceHighlight variant='outcome'>- R$50,00</PriceHighlight>
               </td>

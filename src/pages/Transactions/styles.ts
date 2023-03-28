@@ -24,6 +24,30 @@ export const TransactionsTable = styled.table`
       border-radius: 0 6px 6px 0;
     }
   }
+  @media (max-width: 768px) {
+    tr {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 1rem 0;
+    }
+    td {
+      font-size: 0.8rem;
+      padding: 1rem;
+      &:first-child {
+        min-width: 210px;
+        border-radius: 6px 0 0 0px;
+      }
+      &:nth-child(2) {
+        border-radius: 0px 6px 0px 0px;
+      }
+      &:nth-child(3) {
+        border-radius: 0px 0px 0px 6px;
+      }
+      &:last-child {
+        border-radius: 0px 0px 6px 0px;
+      }
+    }
+  }
 `;
 
 interface PriceHighlightProps {

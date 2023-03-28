@@ -5,11 +5,15 @@ export const SummaryContainer = styled.section`
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  overflow-x: auto;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: -5rem;
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+  }
 `;
 
 interface SummaryCardProps {
@@ -39,4 +43,8 @@ export const SummaryCard = styled.div<SummaryCardProps>`
     css`
       background: ${props.theme['green-700']};
     `}
+    @media (max-width: 768px) {
+    strong {
+      font-size: 1.5rem;
+    }
 `;
