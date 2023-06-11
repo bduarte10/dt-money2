@@ -15,6 +15,38 @@
       "category": "alimentação",
       "price": 25,
       "createdAt": "2022-02-12T00:00:00.000Z"
+    },
+    {
+      "description": "teste",
+      "price": 5,
+      "category": "teste",
+      "type": "income",
+      "createdAt": "2023-06-11T06:01:22.645Z",
+      "id": 3
+    },
+    {
+      "description": "tesete",
+      "price": 14000,
+      "category": "teste",
+      "type": "outcome",
+      "createdAt": "2023-06-11T06:14:41.839Z",
+      "id": 4
+    },
+    {
+      "description": "teste",
+      "price": 4,
+      "category": "teste",
+      "type": "outcome",
+      "createdAt": "2023-06-11T06:15:02.875Z",
+      "id": 5
+    },
+    {
+      "description": "iogurte",
+      "price": 40,
+      "category": "alimentação",
+      "type": "outcome",
+      "createdAt": "2023-06-11T06:20:04.675Z",
+      "id": 6
     }
   ]
 }

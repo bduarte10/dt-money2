@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 export const SummaryContainer = styled.section`
   width: 100%;
@@ -14,10 +14,10 @@ export const SummaryContainer = styled.section`
   @media (max-width: 768px) {
     gap: 1.5rem;
   }
-`;
+`
 
 interface SummaryCardProps {
-  variant?: 'green';
+  variant?: 'green'
 }
 
 export const SummaryCard = styled.div<SummaryCardProps>`
@@ -48,4 +48,4 @@ export const SummaryCard = styled.div<SummaryCardProps>`
       font-size: 1.5rem;
     }
   }
-`;
+`
