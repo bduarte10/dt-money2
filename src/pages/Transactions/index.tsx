@@ -1,7 +1,7 @@
-import { useContext } from 'react'
 import { Header } from '../../components/Header'
 import { Summary } from '../../components/Summary'
 import { SearchForm } from './components/SearchForm'
+import { useContextSelector } from 'use-context-selector'
 import {
   PriceHighlight,
   TransactionsContainer,
@@ -12,13 +12,19 @@ import { dateFormatter, priceFormatter } from '../../utils/formatter'
 import { Trash } from 'phosphor-react'
 
 export function Transactions() {
-  const { transactions, handleDelete } = useContext(TransactionsContext)
+  const transactions = useContextSelector(
+    TransactionsContext,
+    (c) => c.transactions,
+  )
+  const handleDelete = useContextSelector(
+    TransactionsContext,
+    (c) => c.handleDelete,
+  )
 
   return (
     <div>
       <Header />
       <Summary />
-
       <TransactionsContainer>
         <SearchForm />
         <TransactionsTable>
