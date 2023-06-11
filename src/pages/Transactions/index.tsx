@@ -9,9 +9,10 @@ import {
 } from './styles'
 import { TransactionsContext } from '../../contexts/TransactionsContext'
 import { dateFormatter, priceFormatter } from '../../utils/formatter'
+import { Trash } from 'phosphor-react'
 
 export function Transactions() {
-  const { transactions } = useContext(TransactionsContext)
+  const { transactions, handleDelete } = useContext(TransactionsContext)
 
   return (
     <div>
@@ -35,6 +36,13 @@ export function Transactions() {
                   <td>{transaction.category}</td>
                   <td>
                     {dateFormatter.format(new Date(transaction.createdAt))}
+                  </td>
+                  <td>
+                    <button
+                      onClick={() => handleDelete(transaction.id.toString())}
+                    >
+                      <Trash size={20} />
+                    </button>
                   </td>
                 </tr>
               )

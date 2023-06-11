@@ -1,22 +1,6 @@
 {
   "transactions": [
     {
-      "id": 1,
-      "description": "Desenvolvimento de site",
-      "type": "income",
-      "category": "venda",
-      "price": 14000,
-      "createdAt": "2022-02-12T00:00:00.000Z"
-    },
-    {
-      "id": 2,
-      "description": "Hamburguer",
-      "type": "outcome",
-      "category": "alimentação",
-      "price": 25,
-      "createdAt": "2022-02-12T00:00:00.000Z"
-    },
-    {
       "description": "teste",
       "price": 5,
       "category": "teste",
@@ -25,28 +9,12 @@
       "id": 3
     },
     {
-      "description": "tesete",
-      "price": 14000,
-      "category": "teste",
-      "type": "outcome",
-      "createdAt": "2023-06-11T06:14:41.839Z",
-      "id": 4
-    },
-    {
-      "description": "teste",
-      "price": 4,
-      "category": "teste",
-      "type": "outcome",
-      "createdAt": "2023-06-11T06:15:02.875Z",
-      "id": 5
-    },
-    {
-      "description": "iogurte",
-      "price": 40,
+      "description": "lanche",
+      "price": 34,
       "category": "alimentação",
       "type": "outcome",
-      "createdAt": "2023-06-11T06:20:04.675Z",
-      "id": 6
+      "createdAt": "2023-06-11T07:03:25.875Z",
+      "id": 4
     }
   ]
 }

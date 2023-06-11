@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { api } from '../lib/axios'
 
-interface Transaction {
+export interface Transaction {
   id: number
   description: string
   type: 'income' | 'outcome'
@@ -22,6 +22,7 @@ interface TransactionContextType {
   fetchSummary: () => Promise<void>
   createTransactions: (data: CreateTransactionType) => Promise<void>
   summary: Transaction[]
+  handleDelete: (id: string) => void
 }
 
 interface TransactionsProviderProps {
@@ -61,6 +62,12 @@ export const TransactionsProvider = ({
     setSummary((state) => [...state, response.data])
   }
 
+  function handleDelete(id: string) {
+    api.delete(`/transactions/${id}`)
+    fetchTransactions()
+    fetchSummary()
+  }
+
   useEffect(() => {
     fetchTransactions()
     fetchSummary()
@@ -74,6 +81,7 @@ export const TransactionsProvider = ({
         fetchSummary,
         createTransactions,
         summary,
+        handleDelete,
       }}
     >
       {children}

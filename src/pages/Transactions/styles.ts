@@ -23,6 +23,18 @@ export const TransactionsTable = styled.table`
     &:last-child {
       border-radius: 0 6px 6px 0;
     }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: 0;
+      color: ${(props) => props.theme['red-300']};
+      &:hover {
+        color: ${(props) => props.theme['red-500']};
+      }
+    }
   }
   @media (max-width: 768px) {
     tr {

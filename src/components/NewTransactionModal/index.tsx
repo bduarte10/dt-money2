@@ -21,9 +21,13 @@ const newTransactionFormSchema = z.object({
   type: z.enum(['income', 'outcome']),
 })
 
+interface NewTransactionModalType {
+  setOpen: (open: boolean) => void
+}
+
 type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>
 
-export const NewTransactionModal = () => {
+export const NewTransactionModal = ({ setOpen }: NewTransactionModalType) => {
   const { createTransactions } = useContext(TransactionsContext)
 
   const {
@@ -41,15 +45,16 @@ export const NewTransactionModal = () => {
 
   async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
     await createTransactions(data)
+    setOpen(false)
     reset()
   }
 
   return (
     <Dialog.Portal>
-      <Overlay />
+      <Overlay onClick={() => setOpen(false)} />
       <Content>
         <Dialog.Title>Nova Transação</Dialog.Title>
-        <CloseButton>
+        <CloseButton onClick={() => setOpen(false)}>
           <X size={24} />
         </CloseButton>
         <form onSubmit={handleSubmit(handleCreateNewTransaction)}>
