@@ -51,10 +51,10 @@ export const NewTransactionModal = ({ setOpen }: NewTransactionModalType) => {
 
   return (
     <Dialog.Portal>
-      <Overlay onClick={() => setOpen(false)} />
+      <Overlay />
       <Content>
         <Dialog.Title>Nova Transação</Dialog.Title>
-        <CloseButton onClick={() => setOpen(false)}>
+        <CloseButton>
           <X size={24} />
         </CloseButton>
         <form onSubmit={handleSubmit(handleCreateNewTransaction)}>

@@ -64,8 +64,12 @@ export const TransactionsProvider = ({
 
   function handleDelete(id: string) {
     api.delete(`/transactions/${id}`)
-    fetchTransactions()
-    fetchSummary()
+    setTransactions((state) =>
+      state.filter((transaction) => transaction.id.toString() !== id),
+    )
+    setSummary((state) =>
+      state.filter((transaction) => transaction.id.toString() !== id),
+    )
   }
 
   useEffect(() => {

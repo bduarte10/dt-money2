@@ -14,7 +14,7 @@ export function Header() {
 
         <Dialog.Root
           open={openNewTransactionModal}
-          onOpenChange={() => setOpenNewTransactionModal(true)}
+          onOpenChange={setOpenNewTransactionModal}
         >
           <Dialog.Trigger asChild>
             <NewTransactionButton>Nova Transação</NewTransactionButton>
