@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { api } from '../lib/axios'
 import { createContext } from 'use-context-selector'
 
@@ -43,7 +43,7 @@ export const TransactionsProvider = ({
     setSummary(response.data)
   }
 
-  const fetchTransactions = async (query?: string) => {
+  const fetchTransactions = useCallback(async (query?: string) => {
     const response = await api.get('/transactions', {
       params: {
         _sort: 'createdAt',
@@ -52,16 +52,19 @@ export const TransactionsProvider = ({
       },
     })
     setTransactions(response.data)
-  }
+  }, [])
 
-  async function createTransactions(data: CreateTransactionType) {
-    const response = await api.post('/transactions', {
-      ...data,
-      createdAt: new Date(),
-    })
-    setTransactions((state) => [response.data, ...state])
-    setSummary((state) => [...state, response.data])
-  }
+  const createTransactions = useCallback(
+    async (data: CreateTransactionType) => {
+      const response = await api.post('/transactions', {
+        ...data,
+        createdAt: new Date(),
+      })
+      setTransactions((state) => [response.data, ...state])
+      setSummary((state) => [...state, response.data])
+    },
+    [],
+  )
 
   function handleDelete(id: string) {
     api.delete(`/transactions/${id}`)
