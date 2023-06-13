@@ -13,6 +13,7 @@ import {
   SignedOut,
 } from '@clerk/clerk-react'
 import { BrowserRouter, useNavigate, Routes, Route } from 'react-router-dom'
+import { ptBR } from '@clerk/localizations'
 
 if (!import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key')
@@ -25,6 +26,7 @@ function ClerkProviderWithRoutes() {
 
   return (
     <ClerkProvider
+      localization={ptBR}
       appearance={{
         baseTheme: dark,
       }}

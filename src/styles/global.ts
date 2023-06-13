@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  :focus {
+  :focus:not(.cl-modalContent){
     outline: 0;
     box-shadow: 0 0 0 2px ${(props) => props.theme['green-500']};
   }
@@ -20,8 +20,12 @@ export const GlobalStyles = createGlobalStyle`
   body, input, textarea, button{
     font: 400 1rem Roboto, sans-serif;
   }
-  .cl-internal-q6wheb{
+  .cl-internal-q6wheb, 
+  .cl-internal-b3fm6y{
     display: none
+  }
+  .cl-internal-k5atl{
+    color: ${(props) => props.theme['gray-100']};
   }
 
 `
