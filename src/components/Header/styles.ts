@@ -16,6 +16,11 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
   align-items: center;
 `
+export const HeaderLinks = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+`
 
 export const NewTransactionButton = styled.button`
   height: 50px;

@@ -9,14 +9,6 @@
       "id": 2
     },
     {
-      "description": "pastel",
-      "price": 10,
-      "category": "food",
-      "type": "outcome",
-      "createdAt": "2023-06-12T01:28:54.189Z",
-      "id": 3
-    },
-    {
       "description": "site",
       "price": 3000,
       "category": "desenvolvimento",
