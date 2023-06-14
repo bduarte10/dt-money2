@@ -11,7 +11,6 @@ export function Header() {
     <HeaderContainer>
       <HeaderContent>
         <img src={logoImg} alt="" />
-
         <Dialog.Root
           open={openNewTransactionModal}
           onOpenChange={setOpenNewTransactionModal}

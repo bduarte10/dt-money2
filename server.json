@@ -1,28 +1,12 @@
 {
   "transactions": [
     {
-      "description": "salario",
-      "price": 3000,
-      "category": "salary",
+      "description": "teste",
+      "price": 2400,
+      "category": "development",
       "type": "income",
-      "createdAt": "2023-06-12T01:05:54.282Z",
-      "id": 2
-    },
-    {
-      "description": "pastel",
-      "price": 10,
-      "category": "food",
-      "type": "outcome",
-      "createdAt": "2023-06-12T01:28:54.189Z",
-      "id": 3
-    },
-    {
-      "description": "site",
-      "price": 3000,
-      "category": "desenvolvimento",
-      "type": "income",
-      "createdAt": "2023-06-12T01:30:26.330Z",
-      "id": 4
+      "createdAt": "2023-06-14T18:13:00.917Z",
+      "id": 1
     }
   ]
 }
