@@ -6,7 +6,7 @@ export const useSummary = () => {
   const summary = useContextSelector(TransactionsContext, (c) => c.summary)
 
   const summaryCalc = useMemo(() => {
-    summary.reduce(
+    return summary.reduce(
       (acc, transaction) => {
         if (transaction.type === 'income') {
           acc.income += transaction.price

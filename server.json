@@ -7,6 +7,14 @@
       "type": "income",
       "createdAt": "2023-06-14T18:13:00.917Z",
       "id": 1
+    },
+    {
+      "description": "maçã",
+      "price": 3,
+      "category": "food",
+      "type": "outcome",
+      "createdAt": "2023-06-14T19:50:23.983Z",
+      "id": 2
     }
   ]
 }
